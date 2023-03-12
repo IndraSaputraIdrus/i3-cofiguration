@@ -191,10 +191,10 @@ set $textcolor  #cfc9c2
 set $itextcolor #969696
 set $accent     #73daca
 
-#                         border          background          text          indicator
-client.focused            $$bgcolor            $textcolor    $ibgcolor 
-client.unfocused          $ibgcolor       $ibgcolor           $itextcolor    $ibgcolor 
-client.focused_inactive   $ibgcolor       $ibgcolor           $itextcolor    $ibgcolor 
+#                         border          background          text            indicator
+client.focused            $bgcolor        $bgcolor            $textcolor      $bgcolor 
+client.unfocused          $ibgcolor       $ibgcolor           $itextcolor     $ibgcolor 
+client.focused_inactive   $ibgcolor       $ibgcolor           $itextcolor     $ibgcolor 
 
 #xfce 4 bar
 # exec --no-startup-id xfce4-panel --disable-wm-check
