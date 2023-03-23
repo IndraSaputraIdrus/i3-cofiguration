@@ -191,16 +191,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # colors
-set $bgcolor    #24283b
-set $ibgcolor   #1a1b26 
-set $textcolor  #cfc9c2
+set $bgcolor    #21252b
+set $ibgcolor   #3c4044 
+set $textcolor  #55b6c2
 set $itextcolor #969696
 set $accent     #73daca
 
 #                         border          background          text            indicator
 client.focused            $bgcolor        $bgcolor            $textcolor      $bgcolor 
-client.unfocused          $ibgcolor       $ibgcolor           $itextcolor     $ibgcolor 
-client.focused_inactive   $ibgcolor       $ibgcolor           $itextcolor     $ibgcolor 
+client.unfocused          $ibgcolor        $ibgcolor           $itextcolor     $ibgcolor 
+client.focused_inactive   $ibgcolor        $ibgcolor           $itextcolor     $ibgcolor 
 
 #xfce 4 bar
 # exec --no-startup-id xfce4-panel --disable-wm-check
@@ -221,13 +221,18 @@ bar {
           background $bgcolor
           separator $accent
           #                         border          background          text          indicator
-          focused_workspace         $accent         $bgcolor            $textcolor    $ibgcolor 
+          focused_workspace         $textcolor      $bgcolor            $textcolor    $ibgcolor 
           inactive_workspace        $ibgcolor       $ibgcolor           $textcolor    $ibgcolor 
         }
 }
+
+# Open Browser
+bindsym $mod+Shift+w exec firefox
 
 # wallpaper
 exec_always feh --bg-fill ~/Pictures/wallpaper-2.png
 
 # assign app to workspace
 for_window [class="firefox"] move to workspace $ws2
+for_window [class="alacritty"] move to workspace $ws1
+
